@@ -1,10 +1,11 @@
 # ScrapLabsForJobs
 
-Simple tool that scraps LLNL and ORNL career pages for job title and links related to a single search word using Google Chrome.
+Simple tool that scraps LLNL, ORNL, LBL career pages for job title and links related to a single search word using Google Chrome.
 Creates dataframe and saves as a .csv file.
+Authored by Matthew Duribn (contact@matthewdurb.in)
 
 Usage:
-  $ python scrapLabsForJobs.py search-word
+  $ python scrapLabsForJobs.py search-words
   
 Dependencies
   - selenium
@@ -13,6 +14,5 @@ Dependencies
 
 To Do
   - clean up xpaths
-  - add next page feature
-  - update for multi-word searches
+  - optimize delays (sleep) for iterating through pages
   - add other labs
