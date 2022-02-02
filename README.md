@@ -9,7 +9,7 @@ Usage:
   
 Dependencies
   - selenium
-  - pandas
+  - pandas (v 0.24+)
   - cromedriver in directory (https://chromedriver.chromium.org/downloads)
 
 To Do
