@@ -56,7 +56,7 @@ class LLNL:
         # ).click()
         self.driver.find_element_by_id("search-term").send_keys(search)
         self.driver.find_element_by_id("search-term-btn").click()
-        sleep(1)
+        sleep(2)
 
     def get_jobs(self, close=True):
         """ Scraps search page for jobs       
@@ -166,9 +166,9 @@ class ORNL:
         results, of = self._page()
         page = 1
         while not int(results[-3:]) == int(of):
-            sleep(2)
             page += 1
             self.driver.find_element_by_xpath(f"//a[@title='Page {page}']").click()
+            sleep(2)
             job, link = self._get_jobs_from_page()
             jobs, links = jobs + job, links + link
             results, of = self._page()
@@ -249,9 +249,9 @@ class LBL:
         pages = int(total_results/res_per_page) + 1
         page = 1
         while not page == pages:
-            sleep(2)
             self.driver.find_element_by_class_name("next").click()
             page += 1
+            sleep(2)
             job, link = self._get_jobs_from_page()
             jobs, links = jobs + job, links + link          
 
